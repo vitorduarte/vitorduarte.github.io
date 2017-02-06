@@ -13,8 +13,10 @@ p {
   margin: 30px 0;
 }
 p a {
-  text-decoration: underline;
+  text-decoration: none;
 }
+
+
 h1,
 h2,
 h3,
@@ -255,6 +257,11 @@ hr.small {
 }
 .section-heading {
   font-size: 36px;
+  margin-top: 60px;
+  font-weight: 700;
+}
+.section-heading-small {
+  font-size: 29px;
   margin-top: 60px;
   font-weight: 700;
 }
