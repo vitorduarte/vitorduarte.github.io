@@ -1,0 +1,44 @@
+# Site Settings
+title: Vitor Duarte
+email: vitor.alves.duarte@gmail.com
+description: The place where I write all about everything.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.bettercallvitor.com" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
+
+# User Settings
+username: Vitor Duarte
+user_description: Passionate for technology, science and people
+disqus_username: disqus_NYc3TJ3JJw
+
+# Social Media
+# Remove the item if you don't need it
+github_username: vitorduarte
+facebook_username: bettercallvitor
+twitter_username: bettercallvitor
+instagram_username: bettercallvitor
+linkedin_username: vitor-duarte-0405b5107
+medium_username: bettercallvitor_53505
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Plugins
+gems:
+  - jemoji
+  - jekyll-twitter-plugin
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+
+# Exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
