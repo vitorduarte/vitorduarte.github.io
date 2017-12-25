@@ -13,7 +13,7 @@ introduction:
 asdasdasdas
 
 
-{% twitter https://twitter.com/opolles/status/904698058570653697 align='center' %}
+
 
 asdasidjasi
 
