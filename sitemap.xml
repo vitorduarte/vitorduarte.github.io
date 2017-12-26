@@ -1,16 +1,89 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for page in site.pages %}
+    
         <url>
-            <loc>{{ page.url | prepend: site.baseurl | prepend: site.url }}</loc>
+            <loc>http://localhost:4000/404.html</loc>
         </url>
-    {% endfor %}
-    {% for post in site.posts %}
+    
         <url>
-            <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
+            <loc>http://localhost:4000/about/</loc>
         </url>
-  {% endfor %}
+    
+        <url>
+            <loc>http://localhost:4000/contact/</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/feed.xml</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/contact/message-sent/</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/search.json</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/sitemap.xml</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/tags/index.html</loc>
+        </url>
+    
+    
+        <url>
+            <loc>http://localhost:4000/como-voc%C3%AA-escolhe-onde-sentar-no-%C3%B4nibus/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/new-york,-i-love-you/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/como-quase-cai-num-golpe-no-facebook-e-como-desviar-deles/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/box-shadow-ou-filter-drop-shadow/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/fazendo-um-formulario-de-contato-no-jekyll-com-vue.js/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/como-migrar-seus-posts-do-wordpress-para-o-jekyll/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/por-que-o-sketch-vale-3-tanques-de-gasolina/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/como-fazer-um-hello-world-com-vue-js-2/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/minhas-primeiras-5-impressoes-sobre-django/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/desafio-aceito-fazendo-uma-app-do-dribbble-do-zero/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/diga-ola-para-o-trcurrencytextfield-um-componente-com-valor/</loc>
+        </url>
+  
+        <url>
+            <loc>http://localhost:4000/seja-bem-vindo/</loc>
+        </url>
+  
 </urlset>
