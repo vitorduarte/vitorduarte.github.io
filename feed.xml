@@ -3,18 +3,18 @@
   <channel>
     <title>Vitor Duarte</title>
     <description>The place where I write all about everything.</description>
-    <link>http://vitoraduarte.com/</link>
-    <atom:link href="http://vitoraduarte.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 05 Jan 2018 16:01:31 -0200</pubDate>
-    <lastBuildDate>Fri, 05 Jan 2018 16:01:31 -0200</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 05 Jan 2018 16:23:13 -0200</pubDate>
+    <lastBuildDate>Fri, 05 Jan 2018 16:23:13 -0200</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
         <title>Jikulumessu, Diversidade e Proporcionalidade</title>
         <description>&lt;p&gt;Um dia enquanto usava o computador, minha mãe assistia TV. Ao desviar a atenção para a tela, notei uma sonoridade estranha. A partir dali, comecei a reparar na novela que ela estava assistindo e reparei que existia algo diferente. Por fim descobri que se tratava de Jikulumessu, uma novela Angolana que estava sendo transmitida pela TV Brasil.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/s/d6u8zt9ive1pwe2/jikulumessu2.jpg?dl=0&quot; alt=&quot;Jikulumessu&quot; /&gt;&lt;/p&gt; &lt;p&gt;Além do sotaque diferente, uma outra coisa me chamou atenção: a grande maioria dos personagens são negros. Me arrisco a dizer que enquanto via aquele episódio não encontrei nenhum personagem branco. Obviamente isso faz total sentido, afinal a população...</description>
         <pubDate>Fri, 05 Jan 2018 13:33:37 -0200</pubDate>
-        <link>http://vitoraduarte.com/jikulumessu,-diversidade-e-proporcionalidade/</link>
-        <guid isPermaLink="true">http://vitoraduarte.com/jikulumessu,-diversidade-e-proporcionalidade/</guid>
+        <link>http://localhost:4000/jikulumessu,-diversidade-e-proporcionalidade/</link>
+        <guid isPermaLink="true">http://localhost:4000/jikulumessu,-diversidade-e-proporcionalidade/</guid>
         
         <category>Negros</category>
         
@@ -35,8 +35,8 @@
         <title>New York, I Love You</title>
         <description>&lt;p&gt;A série Master of None chegou a sua 2ª temporada com uma aceitação incrível. Com a proposta de contar a história de Dev (Aziz Ansari), essa produção vai muito além de uma simples narrativa sobre a vida de um ator e comediante e se torna em uma narrativa sobre a vida. O sexto episódio da segunda temporada, intitulado “New York, I Love You”, deixa isso muito claro.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com./s/dmjxcvpu8cdp689/1_bzOCk6m0-Sq_Gndz1jGWUA.png?dl=0&quot; alt=&quot;NewYork&quot; /&gt;&lt;/p&gt; &lt;p&gt;Toda grande metrópole possui uma imagem clara associada a ela, essa imagem é tão forte que permeia o senso comum. É assim com Tóquio, é assim com São Paulo...</description>
         <pubDate>Mon, 25 Dec 2017 22:00:01 -0200</pubDate>
-        <link>http://vitoraduarte.com/new-york,-i-love-you/</link>
-        <guid isPermaLink="true">http://vitoraduarte.com/new-york,-i-love-you/</guid>
+        <link>http://localhost:4000/new-york,-i-love-you/</link>
+        <guid isPermaLink="true">http://localhost:4000/new-york,-i-love-you/</guid>
         
         <category>Serie</category>
         
@@ -55,8 +55,8 @@
         <title>Como você escolhe onde sentar no ônibus?</title>
         <description>&lt;p&gt;Domingo, já tinha passado das 23:00, voltando pra casa do teatro. Sem hesitação sentei num dos melhores lugares do ônibus, perto do ar condicionado, espaço pras pernas, dia de sorte! Pra minha surpresa, apesar do horário, o ônibus encheu.&lt;/p&gt; &lt;p&gt;Todos os assentos ocupados, com exceção do assento ao meu lado. Duas pessoas chegaram, se acomodaram nos lugares improvisados, sabe aqueles espaços que os passageiros transformam em lugares por causa da necessidade? Nada de sentarem ao meu lado. Duas paradas depois, um passageiro entra, analisa por uns 5 segundos os lugares do ônibus e por fim senta ao meu lado.&lt;/p&gt; &lt;p&gt;Parei...</description>
         <pubDate>Mon, 25 Dec 2017 17:30:00 -0200</pubDate>
-        <link>http://vitoraduarte.com/como-voc%C3%AA-escolhe-onde-sentar-no-%C3%B4nibus/</link>
-        <guid isPermaLink="true">http://vitoraduarte.com/como-voc%C3%AA-escolhe-onde-sentar-no-%C3%B4nibus/</guid>
+        <link>http://localhost:4000/como-voc%C3%AA-escolhe-onde-sentar-no-%C3%B4nibus/</link>
+        <guid isPermaLink="true">http://localhost:4000/como-voc%C3%AA-escolhe-onde-sentar-no-%C3%B4nibus/</guid>
         
         <category>Negros</category>
         
