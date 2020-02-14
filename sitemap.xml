@@ -1,53 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    
-        <url>
-            <loc>http://vitoraduarte.com/404.html</loc>
-        </url>
-    
-        <url>
-            <loc>http://vitoraduarte.com/about/</loc>
-        </url>
-    
-        <url>
-            <loc>http://vitoraduarte.com/contact/</loc>
-        </url>
-    
-        <url>
-            <loc>http://vitoraduarte.com/feed.xml</loc>
-        </url>
-    
-        <url>
-            <loc>http://vitoraduarte.com/</loc>
-        </url>
-    
-        <url>
-            <loc>http://vitoraduarte.com/contact/message-sent/</loc>
-        </url>
-    
-        <url>
-            <loc>http://vitoraduarte.com/search.json</loc>
-        </url>
-    
-        <url>
-            <loc>http://vitoraduarte.com/sitemap.xml</loc>
-        </url>
-    
-        <url>
-            <loc>http://vitoraduarte.com/tags/index.html</loc>
-        </url>
-    
-    
-        <url>
-            <loc>http://vitoraduarte.com/jikulumessu,-diversidade-e-proporcionalidade/</loc>
-        </url>
+<?xml version="1.0" encoding="utf-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://vitoraduarte.com/</loc>
+    <lastmod>2020-02-13</lastmod>
+  </url>
+
   
-        <url>
-            <loc>http://vitoraduarte.com/new-york,-i-love-you/</loc>
-        </url>
+    
+      <url>
+        <loc>https://vitoraduarte.com/about/</loc>
+        
+          <lastmod>2017-01-18</lastmod>
+        
+      </url>
+    
   
-        <url>
-            <loc>http://vitoraduarte.com/como-voc%C3%AA-escolhe-onde-sentar-no-%C3%B4nibus/</loc>
-        </url>
+    
+      <url>
+        <loc>https://vitoraduarte.com/blog/</loc>
+        
+          <lastmod>2020-02-13</lastmod>
+        
+      </url>
+    
   
+    
+  
+    
+      <url>
+        <loc>https://vitoraduarte.com/</loc>
+        
+          <lastmod>2019-09-13</lastmod>
+        
+      </url>
+    
+  
+
+  
+    
+      <url>
+        <loc>https://vitoraduarte.com/new-york,-i-love-you.html</loc>
+        
+          <lastmod>2020-02-13</lastmod>
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://vitoraduarte.com/como-voc%C3%AA-escolhe-onde-sentar-no-%C3%B4nibus.html</loc>
+        
+          <lastmod>2020-02-13</lastmod>
+        
+      </url>
+    
+  
+
 </urlset>
