@@ -1,0 +1,17 @@
+<section class="section-sm pb-2 page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 mx-auto text-center">
+        {{ if or (eq .Section "tags") (eq .Section "categories") }}
+        {{ if or (strings.HasSuffix .Permalink `tags/`) (strings.HasSuffix .Permalink `categories/`) }}
+        <h3 class="mb-3 text-dark font-weight-bold">{{.Title | markdownify}}</h3>
+        {{else}}
+        <h4 class="mb-3 text-dark font-weight-bold">Showing posts from <mark>{{.Title | markdownify}}</mark></h4>
+        {{ end }}
+        {{ else }}
+        <h3 class="mb-3 text-dark font-weight-bold">{{.Title | markdownify}}</h3>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

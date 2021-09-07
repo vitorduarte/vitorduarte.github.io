@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12">
+        <ul class="list-inline taxonomies-list">
+          {{ if strings.HasSuffix .Permalink `tags/` }}
+          {{ range .Site.Taxonomies.tags }}
+          <li class="list-inline-item mb-1">
+            <a class="h5 px-4 py-3 rounded bg-light d-block font-weight-700" href="{{ .Page.Permalink }}"><i
+                class="las la-tags mr-1"></i> {{ .Page.Title }} ({{ .Count }})</a>
+          </li>
+          {{ end }}
+          {{ end }}
+          {{ if strings.HasSuffix .Permalink `categories/` }}
+          {{ range .Site.Taxonomies.categories }}
+          <li class="list-inline-item mb-1">
+            <a class="h5 px-4 py-3 rounded bg-light d-block font-weight-700" href="{{ .Page.Permalink }}"><i
+                class="las la-tags mr-1"></i> {{ .Page.Title }} ({{ .Count }})</a>
+          </li>
+          {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

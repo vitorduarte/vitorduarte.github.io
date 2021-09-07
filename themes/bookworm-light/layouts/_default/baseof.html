@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default `en-US` }}">
+{{ partial "head.html" . }}
+
+<body>
+  {{ partialCached "preloader.html" . }}
+  {{ partial "header.html" . }}
+  {{if and (not .IsHome) (ne .Section "blog")
+  (not (strings.HasSuffix .Permalink `about/`))
+  (not (strings.HasSuffix .Permalink `search/`))
+  }}
+  {{ partial "page-header.html" . }}
+  {{end}}
+  {{ block "main" . }}{{ end }}
+  {{ partialCached "footer.html" . }}
+  {{ partialCached "script.html" . }}
+</body>
+
+</html>
