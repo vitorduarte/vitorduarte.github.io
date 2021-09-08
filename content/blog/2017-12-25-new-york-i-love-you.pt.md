@@ -5,7 +5,7 @@ image: 'images/post/2017-12-25-new-york-i-love-you/thumb.png'
 date: 2017-12-25T16:00:01-08:00
 author: 'Vitor Duarte'
 tags: ['Serie', 'Netflix', 'Master Of None', 'Crítica']
-categories: ['Series', 'Tv Show']
+categories: ['Series']
 draft: false
 ---
 

@@ -20,7 +20,7 @@ body {
 .mark,
 mark {
   padding: 0 5px 4px;
-  background-color: rgba($color-primary, .1);
+  background-color: rgba($color-primary, 0.1);
 }
 
 /*------------------------------------------------------------------
@@ -65,13 +65,12 @@ mark {
   }
 }
 
-
 // social-links
 .social-links {
   a {
     font-size: 18px;
     padding: 7px;
-    color: rgba($black, .8);
+    color: rgba($black, 0.8);
     display: inline-block;
 
     &:hover {
@@ -87,7 +86,6 @@ mark {
     @extend .rounded;
   }
 }
-
 
 // card style
 .card.post-card {
@@ -145,14 +143,14 @@ a.post-title:hover,
 
   .card-meta-tag {
     .list-inline-item:not(:last-child) {
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
 
     a {
       color: $gray;
 
       &::before {
-        content: "#";
+        content: '#';
       }
 
       &:hover {
@@ -169,7 +167,6 @@ a.post-title:hover,
     color: $white;
   }
 }
-
 
 // content
 .content {
@@ -216,7 +213,7 @@ a.post-title:hover,
     border-left: 6px solid $color-primary;
     color: $dark;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 18px;
     margin: 30px 0;
     border-radius: 5px;
 
@@ -228,7 +225,6 @@ a.post-title:hover,
 
 // content style
 .content {
-
   * {
     word-break: break-word;
     overflow-wrap: break-word;
@@ -290,7 +286,6 @@ a.post-title:hover,
         top: 8px;
       }
     }
-
   }
 
   table {
@@ -302,7 +297,7 @@ a.post-title:hover,
 
   table td,
   table th {
-    padding: .75rem;
+    padding: 0.75rem;
     vertical-align: top;
     margin-bottom: 0;
     border: 1px solid #e0e0e0;
@@ -347,7 +342,7 @@ a.post-title:hover,
     color: $white;
     font-family: 'Line Awesome Free';
     font-weight: 900;
-    content: "\f05a";
+    content: '\f05a';
     left: 10px;
   }
 
@@ -364,9 +359,8 @@ a.post-title:hover,
     left: 2rem;
   }
 
-
   .notices.tip p {
-    border-top: 30px solid #78C578;
+    border-top: 30px solid #78c578;
     background: $light;
   }
 
@@ -379,7 +373,7 @@ a.post-title:hover,
   }
 
   .notices.info p {
-    border-top: 30px solid #F0B37E;
+    border-top: 30px solid #f0b37e;
     background: #f7f7f7;
   }
 
@@ -391,9 +385,8 @@ a.post-title:hover,
     left: 2rem;
   }
 
-
   .notices.warning p {
-    border-top: 30px solid #E06F6C;
+    border-top: 30px solid #e06f6c;
     background: $light;
   }
 
@@ -505,7 +498,6 @@ a.post-title:hover,
   border-top: 1px solid $color-primary;
 }
 
-
 // form-control
 .form-control {
   padding: 0;
@@ -516,14 +508,14 @@ a.post-title:hover,
   padding: 12px 16px;
   font-size: 17px;
   font-weight: 500;
-  transition: .3s ease;
+  transition: 0.3s ease;
 
   &:focus {
     box-shadow: none;
     color: $dark;
     border-color: $color-primary;
 
-    ~.input-group-append {
+    ~ .input-group-append {
       .input-group-text {
         border-color: $color-primary;
       }
@@ -539,7 +531,7 @@ textarea {
   background-color: transparent;
   border-bottom: 1px solid #999;
   border-radius: 0 !important;
-  transition: .3s ease;
+  transition: 0.3s ease;
 
   .icon {
     font-size: 22px;
@@ -571,19 +563,19 @@ button.input-group-text {
     border-radius: 0;
   }
 
-  .custom-control-input:checked~.custom-control-label::before,
-  .custom-control-input:not(:disabled):active~.custom-control-label::before {
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     background-color: $color-primary;
     border-color: $color-primary;
   }
 
-  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
     border-color: transparent;
   }
 
-  .custom-control-input:disabled:checked~.custom-control-label::before {
-    background-color: rgba($color-primary, .5);
-    border-color: rgba($color-primary, .2);
+  .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba($color-primary, 0.5);
+    border-color: rgba($color-primary, 0.2);
   }
 }
 
@@ -591,7 +583,7 @@ button.input-group-text {
  # helper classes
 -------------------------------------------------------------------*/
 .font-primary {
-  font-family: $font-primary
+  font-family: $font-primary;
 }
 
 .rounded {
@@ -600,47 +592,47 @@ button.input-group-text {
 }
 
 .font-weight-500 {
-  font-weight: 500
+  font-weight: 500;
 }
 
 .font-weight-700 {
-  font-weight: 700
+  font-weight: 700;
 }
 
 .font-weight-800 {
-  font-weight: 800
+  font-weight: 800;
 }
 
 .font-weight-900 {
-  font-weight: 900
+  font-weight: 900;
 }
 
 .text-primary {
-  color: $color-primary !important
+  color: $color-primary !important;
 }
 
 a.text-primary:hover {
-  color: darken($color-primary, 10) !important
+  color: darken($color-primary, 10) !important;
 }
 
 .bg-primary {
-  background-color: $color-primary !important
+  background-color: $color-primary !important;
 }
 
 .text-dark {
-  color: $dark
+  color: $dark;
 }
 
 a.text-dark:hover {
-  color: $color-primary !important
+  color: $color-primary !important;
 }
 
 .bg-light {
-  background-color: $light !important
+  background-color: $light !important;
 }
 
 .bg-dark {
-  background-color: $dark !important
+  background-color: $dark !important;
 }
 
 .text-gray:hover {
@@ -651,7 +643,7 @@ a.text-dark:hover {
 footer {
   background-color: $dark;
   .icon-box a {
-    color: rgba($white, .7);
+    color: rgba($white, 0.7);
     &:hover {
       color: $white;
       background-color: $color-primary;
@@ -661,7 +653,7 @@ footer {
 }
 .footer-menu {
   li a {
-    color: rgba($white, .7);
+    color: rgba($white, 0.7);
     &:hover {
       color: $color-primary;
       text-decoration: underline;
@@ -669,8 +661,8 @@ footer {
   }
 }
 .copyright-text {
-  color: rgba($white, .7);
+  color: rgba($white, 0.7);
   a {
-    color: rgba($white, .7);
+    color: rgba($white, 0.7);
   }
 }
