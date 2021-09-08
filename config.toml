@@ -1,13 +1,13 @@
 ######################## default configuration ####################
 baseURL = "https://vitorduarte.github.io/"
-title = "Bookworm - Personal Blog Template"
+title = "Vitor Duarte - Personal Blog"
 theme = "bookworm-light"
 # post pagination
 paginate = "5"
 # post excerpt
 summaryLength = "20"
 # google analytics
-googleAnalytics = "" # example : UA-123-45
+googleAnalytics = "UA-65732015-2" # example : UA-123-45
 # disqus short name
 disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
 
@@ -15,10 +15,10 @@ disqusShortname = "themefisher-template" # get your shortname form here : https:
 defaultContentLanguage = 'en'
 [languages]
   [languages.pt]
-    title = 'Meu blog'
+    title = 'Vitor Duarte'
     weight = 1
   [languages.en]
-    title = 'My blog'
+    title = 'Vitor Duarte'
     weight = 1
 
 
@@ -80,16 +80,16 @@ color_primary = "#01AD9F"
 
 #################### default parameters ################################
 [params]
-logo = "images/logo.png"
+logo = ""
 logo_height = "35px"
 favicon = "images/favicon.png"
 # Meta data
 description = "Vitor Duarte personal blog"
-author = "Vitor Alves Duarte"
+author = "Vitor Duarte"
 # contact form action
 contact_form_action = "#" # contact form works with https://formspree.io
 # search
-search = true
+search = false
 # main section
 mainSections = ["blog"]
 # copyright
@@ -190,17 +190,9 @@ weight = 4
 
 # Social Icons
 [[params.social]]
-icon = "lab la-facebook-f" # https://icons8.com/line-awesome
-url = "https://www.facebook.com/"
-
-[[params.social]]
-icon = "lab la-twitter" # https://icons8.com/line-awesome
-url = "https://www.twitter.com/"
-
-[[params.social]]
-icon = "lab la-instagram" # https://icons8.com/line-awesome
-url = "https://www.instagram.com/"
+icon = "lab la-github" # https://icons8.com/line-awesome
+url = "https://github.com/vitorduarte"
 
 [[params.social]]
 icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
-url = "https://www.linkedin.com/"
+url = "https://www.linkedin.com/in/vitor-duarte-0405b5107/"
