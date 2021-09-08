@@ -2,7 +2,7 @@
 title: 'Competições Implícitas'
 description: 'Competições Implícitas, formatura, humor, caxirola'
 image: 'images/post/2019-08-12-competicoes-implicitas/thumb.jpg'
-date: 2017-12-25T16:00:01-08:00
+date: 2019-08-12T16:00:01-08:00
 author: 'Vitor Duarte'
 tags: ['Humor', 'Comportamento', 'Competição']
 categories: ['Humor']
