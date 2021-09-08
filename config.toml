@@ -133,14 +133,9 @@ url = "pt/about/"
 weight = 2
 
 [[languages.pt.menu.main]]
-  name = "Tags"
-  url = "pt/tags/"
-  weight = 3
-
-[[languages.pt.menu.main]]
   name = "Categorias"
   url = "pt/categories/"
-  weight = 4
+  weight = 3
 
 
 [languages.en.menu]
@@ -156,14 +151,9 @@ weight = 2
 
 
 [[languages.en.menu.main]]
-name = "Tags"
-url = "tags/"
-weight = 3
-
-[[languages.en.menu.main]]
-name = "Category"
+name = "Categories"
 url = "categories/"
-weight = 4
+weight = 3
 
 
 
