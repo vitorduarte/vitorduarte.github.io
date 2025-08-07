@@ -51,7 +51,7 @@
               {{ if .IsTranslated }}
               {{ range .Translations }}
               <li class="nav-item">
-                <a class="nav-link" href="{{.URL | absURL}}">
+                <a class="nav-link" href="{{.RelPermalink}}">
                   {{ .Language.Lang }}</a>
               </li>
               {{ end }}

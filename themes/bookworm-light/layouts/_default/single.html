@@ -34,7 +34,7 @@
         </div>
         {{ end }}
 
-        <div class="content text-justify">
+        <div class="content text-left">
           {{.Content}}
         </div>
       </div>
@@ -70,7 +70,7 @@
               <ul class="social-links list-unstyled list-inline ml-0 ml-sm-n2">
                 {{ range .Params.social }}
                 <li class="list-inline-item"><a href="{{.link | safeURL}}">
-                    <i class="lab {{.icon}}"></i>
+                    <i class="{{.icon}}"></i>
                   </a></li>
                 {{end}}
               </ul>

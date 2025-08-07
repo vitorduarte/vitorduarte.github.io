@@ -3,7 +3,8 @@ baseURL = "https://vitorduarte.github.io/"
 title = "Vitor Duarte - Personal Blog"
 theme = "bookworm-light"
 # post pagination
-paginate = "5"
+[pagination]
+pagerSize = 5
 # post excerpt
 summaryLength = "20"
 # google analytics
@@ -43,6 +44,8 @@ link = "plugins/bootstrap/bootstrap.min.css"
 link = "plugins/line-awesome/css/line-awesome.min.css"
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800;900&display=swap"
+[[params.plugins.css]]
+link = "plugins/font-awesome/css/all.min.css"
 
 # JS Plugins
 [[params.plugins.js]]
@@ -180,9 +183,13 @@ weight = 4
 
 # Social Icons
 [[params.social]]
-icon = "lab la-github" # https://icons8.com/line-awesome
-url = "https://github.com/vitorduarte"
+icon = "fa-brands fa-youtube"
+url = "https://www.youtube.com/bettercallvitor"
 
 [[params.social]]
-icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
-url = "https://www.linkedin.com/in/vitor-duarte-0405b5107/"
+icon = "fa-brands fa-instagram"
+url = "http://instagram.com/bettercallvitor"
+
+[[params.social]]
+icon = "fa-brands fa-tiktok"
+url = "http://tiktok.com/@bettercallvitor"

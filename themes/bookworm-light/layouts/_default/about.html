@@ -22,7 +22,7 @@
         <ul class="social-links list-unstyled list-inline mt-4">
           {{ range .social_links }}
           <li class="list-inline-item"><a href="{{.link | safeURL}}">
-              <i class="lab {{.icon}}"></i>
+              <i class="{{.icon}}"></i>
             </a></li>
           {{end}}
         </ul>
