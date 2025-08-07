@@ -2,18 +2,23 @@
 baseURL = "https://vitorduarte.github.io/"
 title = "Vitor Duarte - Personal Blog"
 theme = "bookworm-light"
-# post pagination
-[pagination]
-pagerSize = 5
+defaultContentLanguage = 'pt'
+
 # post excerpt
 summaryLength = "20"
-# google analytics
-googleAnalytics = "UA-65732015-2" # example : UA-123-45
 # disqus short name
 disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
 
+# post pagination
+[pagination]
+pagerSize = 5
+
+# google analytics
+[services]
+  [services.googleAnalytics]
+    id = 'G-5T4W6Y8Z0P'
+
 ############################# Language #############################
-defaultContentLanguage = 'en'
 [languages]
   [languages.pt]
     title = 'Vitor Duarte'
