@@ -193,3 +193,7 @@ url = "http://instagram.com/bettercallvitor"
 [[params.social]]
 icon = "fa-brands fa-tiktok"
 url = "http://tiktok.com/@bettercallvitor"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
