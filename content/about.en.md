@@ -1,12 +1,12 @@
 ---
 title: 'About'
 layout: 'about'
-image: 'images/about.png'
+image: 'images/about2.png'
 draft: false
 
 #caption
 caption:
-  enable: true
+  enable: false
   title: "Hey, I'm Vitor Duarte 🤙🏾"
 
 # social
