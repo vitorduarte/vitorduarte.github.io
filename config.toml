@@ -132,17 +132,17 @@ expire_days = 2
 [languages.pt.menu]
 [[languages.pt.menu.main]]
   name = "Inicio"
-  url = "/pt"
+  url = "/"
   weight = 1
 
 [[languages.pt.menu.main]]
 name = "Sobre"
-url = "pt/about/"
+url = "about/"
 weight = 2
 
 [[languages.pt.menu.main]]
   name = "Categorias"
-  url = "pt/categories/"
+  url = "categories/"
   weight = 3
 
 
