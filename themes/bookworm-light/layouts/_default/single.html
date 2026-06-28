@@ -28,10 +28,13 @@
           </ul>
         </div>
 
+
+        {{ if .Params.showImage }}
         {{ with .Params.image }}
         <div class="mb-5 text-center">
           <img loading="lazy" class="img-fluid rounded" src="{{ . | absURL}}" alt="Image not Found">
         </div>
+        {{ end }}
         {{ end }}
 
         <div class="content text-left">

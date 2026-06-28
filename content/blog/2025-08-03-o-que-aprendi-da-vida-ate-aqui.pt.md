@@ -3,6 +3,7 @@ title: 'O que aprendi da vida até aqui ou um compilado de frases clichês segui
 description: 'Um dos meus maiores sonhos é escrever um livro. Na verdade, não é necessariamente escrever um livro, mas escrever um livro biográfico e ser julgado por não ter experiências suficientes na vida para isso.
 '
 image: 'images/post/2025-08-03-o-que-aprendi-da-vida-ate-aqui/thumb.jpg'
+showImage: true
 date: 2025-08-03T21:00:01-03:00
 author: 'Vitor Duarte'
 tags: ['Comportamento', 'Humor']
