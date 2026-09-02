@@ -204,6 +204,49 @@ a.post-title:hover,
   }
 }
 
+// taxonomy pill
+.taxonomy-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba($color-primary, 0.1);
+  color: $color-primary;
+  font-family: $font-heading;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  border: 1.5px solid rgba($color-primary, 0.2);
+
+  &:hover {
+    background: $color-primary;
+    color: $white;
+    transform: translateY(-2px);
+    text-decoration: none;
+
+    .pill-count {
+      background: rgba($white, 0.25);
+      color: $white;
+    }
+  }
+
+  .pill-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($color-primary, 0.15);
+    color: $color-primary;
+    font-size: 12px;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+}
+
 // content
 .content {
   max-width: 65ch;
