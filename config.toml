@@ -37,8 +37,7 @@ min = "0.80.0"
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
-[markup.goldmark.renderer]
-unsafe= true
+
 
 
 ############################## Plugins ##############################
