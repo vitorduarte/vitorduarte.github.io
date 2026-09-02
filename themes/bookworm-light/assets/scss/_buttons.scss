@@ -1,7 +1,11 @@
 // button style
 .btn {
 	font-size: 16px;
-	padding: 12px 28px;
+	min-height: 44px;
+	padding: 10px 28px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	color: $white;
 	border: 0;
 	border-radius: 50px;
@@ -9,6 +13,7 @@
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+	touch-action: manipulation;
    @include desktop-lg {
       font-size: 15px;
 	}

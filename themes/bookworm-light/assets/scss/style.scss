@@ -7,7 +7,9 @@ AUTHOR WEBSITE: https://themefisher.com
 
 // site variables
 {{ with site.Params.variables }}
-$font-primary: '{{.font_primary}}', sans-serif;
+$font-primary: '{{.font_primary}}', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-heading: '{{.font_heading}}', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-body: '{{.font_body}}', Georgia, 'Times New Roman', serif;
 
 $h1: {{.h1}};
 $h1-lg: {{.h1_lg}};

@@ -4,26 +4,33 @@
 {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq
 .Section "categories") (eq .Section "tags") }}
 
+<div class="reading-progress-container">
+  <div class="reading-progress-bar" id="reading-progress-bar"></div>
+</div>
+
 <section class="section-sm">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5 single-post-header">
           <h3 class="h2 mb-4 post-title">{{.Title}}</h3>
           <ul class="card-meta list-inline">
             <li class="list-inline-item">
-              <a href="#!" class="card-meta-author">
-                {{ with .Site.GetPage (.Params.author | urlize | lower) }}
-                <a href="{{.Permalink}}" class="card-meta-author">
-                  <img loading="lazy" src="{{.Params.image | absURL}}" alt="{{ .Title }}">
-                  <span>{{.Title}}</span>
-                </a>
-                {{ end }}
+              {{ with .Site.GetPage (.Params.author | urlize | lower) }}
+              <a href="{{.Permalink}}" class="card-meta-author">
+                <img loading="lazy" src="{{.Params.image | absURL}}" alt="{{ .Title }}">
+                <span>{{.Title}}</span>
               </a>
+              {{ end }}
             </li>
             <li class="list-inline-item">|</li>
             <li class="list-inline-item">
-              <span>{{.PublishDate.Format "02 January 2006"}}</span>
+              <span>{{.PublishDate.Format "02 Jan 2006"}}</span>
+            </li>
+            <li class="list-inline-item">|</li>
+            <li class="list-inline-item">
+              <span class="reading-time"><i class="fa-regular fa-clock mr-1"></i> {{ math.Round (div (countwords
+                .Content) 200.0) }} min </span>
             </li>
           </ul>
         </div>

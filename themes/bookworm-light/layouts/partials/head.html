@@ -15,6 +15,7 @@
   {{ "<!-- CSS Plugins -->" | safeHTML}}
   {{ partialCached "style.html" . }}
 
-  {{ template "_internal/google_analytics.html" . }}
+  {{ partial "google_analytics.html" . }}
+
 
 </head>

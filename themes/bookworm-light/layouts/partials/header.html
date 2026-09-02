@@ -11,21 +11,41 @@
             {{else}} {{site.Title}} {{end}}
           </a>
 
-          {{if site.Params.search}}
-          <button class="search-toggle d-inline-block d-lg-none ml-auto mr-3" data-toggle="search"
-            aria-label="Search Toggle">
-            <i class="las la-search"></i>
-          </button>
-          {{end}}
+          <div class="d-flex align-items-center ml-auto d-lg-none">
+            <div class="lang-segmented-switch mr-2" role="group" aria-label="Language Selector">
+              {{ $currentPage := . }}
+              {{ range site.Languages }}
+                {{ $lang := .Lang }}
+                {{ $isCurrent := eq $lang $currentPage.Lang }}
+                {{ $url := "" }}
+                {{ range $currentPage.AllTranslations }}
+                  {{ if eq .Language.Lang $lang }}
+                    {{ $url = .RelPermalink }}
+                  {{ end }}
+                {{ end }}
+                {{ if not $url }}
+                  {{ range site.Sites }}
+                    {{ if eq .Language.Lang $lang }}
+                      {{ $url = .Home.RelPermalink }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+                {{ if $isCurrent }}
+                  <span class="lang-segment active" aria-current="true">{{ $lang | upper }}</span>
+                {{ else }}
+                  <a href="{{ $url }}" class="lang-segment" aria-label="{{ .LanguageName }}">{{ $lang | upper }}</a>
+                {{ end }}
+              {{ end }}
+            </div>
+            {{if site.Params.search}}
+            <button class="search-toggle" data-toggle="search" aria-label="Search Toggle">
+              <i class="las la-search"></i>
+            </button>
+            {{end}}
+          </div>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navHeader"
-            aria-controls="navHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="d-inline lab la-buromobelexperte"></i>
-            <i class="d-none las la-times"></i>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navHeader">
-            <ul class="navbar-nav {{ if site.Params.search }}mx-auto{{else}}ml-auto{{end}}">
+          <div class="collapse navbar-collapse d-none d-lg-block" id="navHeader">
+            <ul class="navbar-nav align-items-center {{ if site.Params.search }}mx-auto{{else}}ml-auto{{end}}">
               {{ $current := . }}
               {{ range site.Menus.main }}
               {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
@@ -47,28 +67,44 @@
               </li>
               {{end}}
               {{end}}
-
-              {{ if .IsTranslated }}
-              {{ range .Translations }}
-              <li class="nav-item">
-                <a class="nav-link" href="{{.RelPermalink}}">
-                  {{ .Language.Lang }}</a>
-              </li>
-              {{ end }}
-              {{ end }}
             </ul>
 
-            {{if site.Params.search}}
-            <div class="navbar-right d-none d-lg-inline-block">
-              <ul class="social-links list-unstyled list-inline">
-                <li class="list-inline-item ml-4 d-none d-lg-inline-block">
+            <div class="navbar-right d-none d-lg-flex align-items-center">
+              <div class="lang-segmented-switch mr-3" role="group" aria-label="Language Selector">
+                {{ $currentPage := . }}
+                {{ range site.Languages }}
+                  {{ $lang := .Lang }}
+                  {{ $isCurrent := eq $lang $currentPage.Lang }}
+                  {{ $url := "" }}
+                  {{ range $currentPage.AllTranslations }}
+                    {{ if eq .Language.Lang $lang }}
+                      {{ $url = .RelPermalink }}
+                    {{ end }}
+                  {{ end }}
+                  {{ if not $url }}
+                    {{ range site.Sites }}
+                      {{ if eq .Language.Lang $lang }}
+                        {{ $url = .Home.RelPermalink }}
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+                  {{ if $isCurrent }}
+                    <span class="lang-segment active" aria-current="true">{{ $lang | upper }}</span>
+                  {{ else }}
+                    <a href="{{ $url }}" class="lang-segment" aria-label="{{ .LanguageName }}">{{ $lang | upper }}</a>
+                  {{ end }}
+                {{ end }}
+              </div>
+              {{if site.Params.search}}
+              <ul class="social-links list-unstyled list-inline mb-0">
+                <li class="list-inline-item">
                   <button class="search-toggle" data-toggle="search" aria-label="Search Toggle">
                     <i class="las la-search"></i>
                   </button>
                 </li>
               </ul>
+              {{end}}
             </div>
-            {{end}}
           </div>
         </nav>
       </div>
@@ -76,8 +112,34 @@
   </div>
 </header>
 
+<!-- Mobile Bottom Navigation -->
+<nav class="mobile-bottom-nav d-lg-none" aria-label="Mobile Navigation">
+  <div class="mobile-bottom-nav-container">
+    {{ $current := . }}
+    {{ range site.Menus.main }}
+      {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+      {{ $active = or $active (eq .Name $current.Title) }}
+      {{ $urlLower := .URL | lower }}
+      {{ $nameLower := .Name | lower }}
 
+      {{ $icon := "fa-solid fa-compass" }}
+      {{ if or (eq .URL "/") (eq .URL "") (in $nameLower "início") (in $nameLower "inicio") (in $nameLower "home") }}
+        {{ $icon = "fa-solid fa-house" }}
+      {{ else if or (in $urlLower "about") (in $nameLower "sobre") (in $nameLower "about") }}
+        {{ $icon = "fa-solid fa-user" }}
+      {{ else if or (in $urlLower "categor") (in $nameLower "categoria") (in $nameLower "categories") }}
+        {{ $icon = "fa-solid fa-layer-group" }}
+      {{ else if or (in $urlLower "author") (in $nameLower "autor") (in $nameLower "author") }}
+        {{ $icon = "fa-solid fa-pen-nib" }}
+      {{ end }}
 
+      <a href="{{.URL | absURL}}" class="mobile-bottom-nav-item {{ if $active }}active{{ end }}" aria-label="{{.Name}}">
+        <i class="{{ $icon }}"></i>
+        <span class="mobile-bottom-nav-label">{{.Name}}</span>
+      </a>
+    {{ end }}
+  </div>
+</nav>
 
 {{if site.Params.search}}
 <div class="search-block">

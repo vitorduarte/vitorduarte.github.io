@@ -1,18 +1,14 @@
-{{define "main"}}
-
+{{ define "main" }}
 <section class="section-sm">
   <div class="container">
     <div class="row no-gutters justify-content-center">
       <div class="col-lg-10">
         <div class="row">
           {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-          {{range $index, $items := $paginator.Pages}}
-          <div class="{{ if (eq $index 0) }}col-lg-12{{ else }}col-lg-6{{ end }}">
-            {{.Render "post"}}
-          </div>
-          {{end}}
+          {{ range $index, $items := $paginator.Pages }}
+          <div class="{{ if (eq $index 0) }}col-lg-12{{ else }}col-lg-6{{ end }}">{{.Render "post"}}</div>
+          {{ end }}
         </div>
-
         <div class="row">
           <div class="col-12">
             <nav class="mt-4">
@@ -32,9 +28,13 @@
                 <ul class="pagination justify-content-center">
                   <!-- Previous page. -->
                   {{ if $paginator.HasPrev }}
-                  <li class="page-item"><a class="page-link rounded" href="{{ $paginator.Prev.URL }}" aria-label="Pagination Arrow">
-                    <i class="las la-angle-left"></i>
-                  </a></li>
+                  <li class="page-item">
+                    <a class="page-link rounded"
+                       href="{{ $paginator.Prev.URL }}"
+                       aria-label="Pagination Arrow">
+                      <i class="las la-angle-left"></i>
+                    </a>
+                  </li>
                   {{ end }}
                   <!-- Page numbers. -->
                   {{ range $paginator.Pagers }}
@@ -56,29 +56,31 @@
                   {{ $.Scratch.Set "page_number_flag" true }}
                   {{ end }}
                   <!-- Middle pages. -->
-                  {{ else }}
+                {{ else }}
                   {{ if and ( ge .PageNumber (sub $paginator.PageNumber $adjacent_links) ) ( le .PageNumber (add $paginator.PageNumber $adjacent_links) ) }}
                   {{ $.Scratch.Set "page_number_flag" true }}
                   {{ end }}
                   {{ end }}
                   <!-- Simple page numbers. -->
-                  {{ else }}
+                {{ else }}
                   {{ $.Scratch.Set "page_number_flag" true }}
                   {{ end }}
                   <!-- Output page numbers. -->
                   {{ if eq ($.Scratch.Get "page_number_flag") true }}
                   <li class="page-item{{ if eq . $paginator }} active {{ end }}">
-                    <a href="{{ .URL }}" class="page-link rounded">
-                      {{ .PageNumber }}
-                    </a>
+                    <a href="{{ .URL }}" class="page-link rounded">{{ .PageNumber }}</a>
                   </li>
                   {{ end }}
                   {{ end }}
                   <!-- Next page. -->
                   {{ if $paginator.HasNext }}
-                  <li class="page-item"><a class="page-link rounded" href="{{ $paginator.Next.URL }}" aria-label="Pagination Arrow">
-                    <i class="las la-angle-right"></i>
-                  </a></li>
+                  <li class="page-item">
+                    <a class="page-link rounded"
+                       href="{{ $paginator.Next.URL }}"
+                       aria-label="Pagination Arrow">
+                      <i class="las la-angle-right"></i>
+                    </a>
+                  </li>
                   {{ end }}
                 </ul>
               </nav>
@@ -86,12 +88,10 @@
             </nav>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </section>
-
 {{ with site.Params.instafeed }}
 {{ if .enable }}
 <section class="mb-5 pb-4">
@@ -105,7 +105,9 @@
       </div>
       {{ with .access_token }}
       <div class="mt-5">
-        <div id="instafeed" class="instagram_feed rounded row no-gutters justify-content-center" data-accessToken="{{.}}"></div>
+        <div id="instafeed"
+             class="instagram_feed rounded row no-gutters justify-content-center"
+             data-accessToken="{{.}}"></div>
       </div>
       {{ end }}
     </div>
@@ -113,5 +115,4 @@
 </section>
 {{ end }}
 {{ end }}
-
-{{end}}
+{{ end }}

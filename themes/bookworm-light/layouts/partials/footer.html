@@ -40,6 +40,11 @@
         {{ with site.Params.copyright }}
         <p class="mb-0 font-weight-500 copyright-text content">{{.| markdownify}}</p>
         {{ end }}
+        <div class="mt-4">
+          <button id="back-to-top" class="btn btn-sm btn-outline-primary rounded-pill px-4" aria-label="Back to Top">
+            <i class="fa-solid fa-arrow-up mr-2"></i> Voltar ao topo
+          </button>
+        </div>
       </div>
     </div>
   </div>

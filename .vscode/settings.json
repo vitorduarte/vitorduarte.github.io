@@ -1,0 +1,20 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "gohugoio.gotmplfmt",
+    "editor.formatOnSave": true
+  },
+  "[gohtml]": {
+    "editor.defaultFormatter": "gohugoio.gotmplfmt",
+    "editor.formatOnSave": true
+  },
+  "[gotmpl]": {
+    "editor.defaultFormatter": "gohugoio.gotmplfmt",
+    "editor.formatOnSave": true
+  },
+  "gotmplfmt.languages": [
+    "html",
+    "gohtml",
+    "gotmpl",
+    "go-template"
+  ]
+}
