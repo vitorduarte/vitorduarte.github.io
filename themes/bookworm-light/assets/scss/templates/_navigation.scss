@@ -17,11 +17,15 @@ header {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: 50px 0 20px;
-  transition: padding .25s ease, box-shadow .25s ease;
+  transition: padding .25s ease, box-shadow .25s ease, transform .3s cubic-bezier(.4,0,.2,1);
 
   @include desktop {
     padding: 16px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    &.nav-hidden {
+      transform: translateY(-100%);
+    }
   }
 
   &.header-sticky-top {
@@ -208,6 +212,11 @@ header {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.04);
   padding-bottom: env(safe-area-inset-bottom, 0);
+  transition: transform .3s cubic-bezier(.4,0,.2,1);
+
+  &.nav-hidden {
+    transform: translateY(100%);
+  }
 
   .mobile-bottom-nav-container {
     display: flex;

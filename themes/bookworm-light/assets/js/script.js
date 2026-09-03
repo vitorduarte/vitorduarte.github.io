@@ -4,6 +4,53 @@
 // prelaoder
 $('.preloader').delay(100).fadeOut(10);
 
+// Mobile scroll-direction nav hide/show
+(function() {
+  var lastScrollY = window.scrollY;
+  var scrollThreshold = 10;
+  var mobileQuery = window.matchMedia('(max-width: 991px)');
+  var $header = $('.header-nav');
+  var $bottomNav = $('.mobile-bottom-nav');
+
+  function onScroll() {
+    var currentScrollY = window.scrollY;
+    var delta = currentScrollY - lastScrollY;
+
+    if (Math.abs(delta) < scrollThreshold) return;
+
+    if (currentScrollY <= 60) {
+      // Near top: always show
+      $header.removeClass('nav-hidden');
+      $bottomNav.removeClass('nav-hidden');
+    } else if (delta > 0) {
+      // Scrolling down: hide nav
+      $header.addClass('nav-hidden');
+      $bottomNav.addClass('nav-hidden');
+    } else {
+      // Scrolling up: show nav
+      $header.removeClass('nav-hidden');
+      $bottomNav.removeClass('nav-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  function handleViewportChange(e) {
+    if (!e.matches) {
+      // Desktop: ensure nav is visible and remove scroll listener
+      $header.removeClass('nav-hidden');
+      $bottomNav.removeClass('nav-hidden');
+      $(window).off('scroll.navHide');
+    } else {
+      lastScrollY = window.scrollY;
+      $(window).on('scroll.navHide', onScroll);
+    }
+  }
+
+  mobileQuery.addEventListener('change', handleViewportChange);
+  handleViewportChange(mobileQuery);
+})();
+
 // header sticky and reading progress
 $(window).scroll(function() {
   if ($(window).scrollTop() >= 50) {

@@ -1,0 +1,107 @@
+/* ── Info Note Trigger ───────────────────────────────────────────── */
+.info-note-trigger {
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 0 2px;
+  transition: color 0.2s ease;
+}
+
+/* Background highlight — wipes in left→right */
+.info-note-trigger::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(240, 102, 23, 0.12);
+  border-radius: 3px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+/* Dotted underline via pseudo-element */
+.info-note-trigger::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: radial-gradient(circle, #f06617 1px, transparent 1px);
+  background-size: 8px 2px;
+  background-repeat: repeat-x;
+  transform-origin: right center;
+  transform: scaleX(1);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-note-trigger:hover::after {
+  background-image: radial-gradient(circle, #c04e0f 1px, transparent 1px);
+}
+
+/* Active state — wipe underline left-to-right, sweep background left-to-right */
+.info-note-trigger[aria-expanded="true"] {
+  color: #c04e0f;
+}
+
+.info-note-trigger[aria-expanded="true"]::before {
+  transform: scaleX(1);
+}
+
+.info-note-trigger[aria-expanded="true"]::after {
+  transform: scaleX(0); /* collapses left→right (origin: right) */
+}
+
+.info-note-trigger:focus-visible {
+  outline: 2px solid #f06617;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── Info Note Popup ─────────────────────────────────────────────── */
+.info-note-popup {
+  position: absolute;
+  z-index: 9999;
+  max-width: min(280px, calc(100vw - 20px));
+  padding: 8px 12px;
+  background: #f06617;
+  color: #ffffff;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(240, 102, 23, 0.35);
+  pointer-events: auto;
+  animation: info-note-in 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.info-note-popup.info-note-popup--closing {
+  animation: info-note-out 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+/* small arrow pointing down — tracks trigger via JS */
+.info-note-popup::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: var(--arrow-left, 50%);
+  transform: translateX(-50%);
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: #f06617 transparent transparent;
+}
+
+@keyframes info-note-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes info-note-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(8px); }
+}
